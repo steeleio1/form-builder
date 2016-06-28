@@ -16,21 +16,24 @@
 	width: 540px;
 }
 
-.firstnamebox {
+.form-input {
 	display: flex;
+/*	display: flex;*/
+/*	flex-direction: column;*/
 	border: solid red 1px;
 	height: 30px;
 	width: 400px;
 	align-items: center;
 	margin-top: 10px;
+/*	justify-content: center;*/
 }
 
-.firstname {
+/*.firstname {
  font-size: 12px;
  color: grey;
  height: 30px;
  width: 300px;
-}
+}*/
 
 
 .lastnamebox {
@@ -48,3 +51,17 @@
  height: 30px;
  width: 300px;
 }
+
+
+.submitbox {
+	display: inline-flex;
+	align-items: center;
+	border: solid blue 1px;
+	height: 76px;
+	width: 540px;
+	align-content: center;
+	justify-content: center;
+}
+
+
+
