@@ -23,7 +23,7 @@ datasearch.then(doStuffWithData);
 function firstnameTemplate (data) {
 	return `
     <div class="form-input">
-    	<i class="fa fa-user" aria-hidden"></i>
+    	<i class="fa ${data.icon}"></i>
       <input class="inputstyle" type="text"
              id="${data.id} "placeholder="${data.label}"
              	>
@@ -34,7 +34,7 @@ function firstnameTemplate (data) {
 function lastnameTemplate (data) {
 	return `
     <div class="form-input">
-    	<i class="fa fa-user" aria-hidden"></i>
+    	<i class="fa ${data.icon}"></i>
       <input type="text"
              id="${data.id} "placeholder="${data.label}">
     </div>`;
@@ -43,7 +43,7 @@ function lastnameTemplate (data) {
 function emailTemplate (data) {
 	return `
     <div class="form-input">
-    <i class="fa fa-envelope-o"></i>
+    	<i class="fa ${data.icon}"></i>
       <input type="text"
              id="${data.id} "placeholder="${data.label}">
     </div>`;
@@ -53,7 +53,7 @@ function emailTemplate (data) {
 function urlTemplate (data) {
 	return `
     <div class="form-input">
-    <i class="fa fa-globe" aria-hidden"></i>
+    	<i class="fa ${data.icon}"></i>
       <input type="text"
              id="${data.id} "placeholder="${data.label}">
     </div>`;
@@ -62,9 +62,8 @@ function urlTemplate (data) {
 function langTemplate (data) {
 	return `
     <div class="lang-input">
-     <label for="mail">${data.label}</label>
-      <input type="${data.type}"
-             id="${data.id}">
+      <input type="text"
+             id="${data.id} "placeholder="${data.label}">
     </div>`;
 };
 
@@ -80,7 +79,7 @@ function commentTemplate (data) {
 function mobileTemplate (data) {
 	return `
     <div class="form-input">
-    <i class="fa fa-mobile" aria-hidden="></i>
+    	<i class="fa ${data.icon}"></i>
       <input type="text"
              id="${data.id} "placeholder="${data.label}">
     </div>`;
@@ -89,7 +88,7 @@ function mobileTemplate (data) {
 function homeTemplate (data) {
 	return `
     <div class="form-input">
-    <i class="fa fa-phone" aria-hidden"></i>
+    	<i class="fa ${data.icon}"></i>
       <input type="text"
              id="${data.id} "placeholder="${data.label}">
     </div>`;
