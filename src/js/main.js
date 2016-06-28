@@ -23,11 +23,9 @@ datasearch.then(doStuffWithData);
 function firstnameTemplate (data) {
 	return `
     <div class="form-input">
-
-    	<i class="fa fa-envelope-o"></i>
-    	<label for="name">${data.label}</label>
-      	<input type="${data.type}"
-             	id="${data.id}"
+    	<i class="fa fa-user" aria-hidden"></i>
+      <input class="inputstyle" type="text"
+             id="${data.id} "placeholder="${data.label}"
              	>
 	 </div>`;
 };
@@ -36,16 +34,66 @@ function firstnameTemplate (data) {
 function lastnameTemplate (data) {
 	return `
     <div class="form-input">
-
-    <i class="fa fa-envelope-o"></i>
-
-      <input type="${data.type}"
-             id="${data.id}">
-      <label for="name">Last Name</label>
-
+    	<i class="fa fa-user" aria-hidden"></i>
+      <input type="text"
+             id="${data.id} "placeholder="${data.label}">
     </div>`;
 };
 
+function emailTemplate (data) {
+	return `
+    <div class="form-input">
+    <i class="fa fa-envelope-o"></i>
+      <input type="text"
+             id="${data.id} "placeholder="${data.label}">
+    </div>`;
+};
+
+
+function urlTemplate (data) {
+	return `
+    <div class="form-input">
+    <i class="fa fa-globe" aria-hidden"></i>
+      <input type="text"
+             id="${data.id} "placeholder="${data.label}">
+    </div>`;
+};
+
+function langTemplate (data) {
+	return `
+    <div class="lang-input">
+     <label for="mail">${data.label}</label>
+      <input type="${data.type}"
+             id="${data.id}">
+    </div>`;
+};
+
+function commentTemplate (data) {
+	return `
+    <div class="comment-input">
+    <i class="fa fa-comments" aria-hidden="></i>
+      <input class ="commentbox" type="text"
+             id="${data.id} "placeholder="${data.label}">
+    </div>`;
+};
+
+function mobileTemplate (data) {
+	return `
+    <div class="form-input">
+    <i class="fa fa-mobile" aria-hidden="></i>
+      <input type="text"
+             id="${data.id} "placeholder="${data.label}">
+    </div>`;
+};
+
+function homeTemplate (data) {
+	return `
+    <div class="form-input">
+    <i class="fa fa-phone" aria-hidden"></i>
+      <input type="text"
+             id="${data.id} "placeholder="${data.label}">
+    </div>`;
+};
 
 
 
@@ -58,19 +106,47 @@ function doStuffWithData (fields) {
 			$(".my-form").append(firstnamehtml);
 
 		} else if (field.label === "Last Name") {
-			var lastnamehtml = LastnameTemplate(field);
+			var lastnamehtml = lastnameTemplate(field);
 			$(".my-form").append(lastnamehtml);
-		}
 
-	});
+		} else if (field.type === "email") {
+			var emailhtml = emailTemplate(field);
+			$(".my-form").append(emailhtml);
+
+		} else if (field.label === "Current website url") {
+			var urlhtml = urlTemplate(field);
+			$(".my-form").append(urlhtml);
+
+		} else if (field.label === "Select Language") {
+			var langhtml = urlTemplate(field);
+			$(".my-form").append(langhtml);	
+
+		} else if (field.label === "Your Comment") {
+			var commenthtml = commentTemplate(field);
+			$(".my-form").append(commenthtml);
+
+		} else if (field.label === "Mobil Number") {
+			var mobilehtml = mobileTemplate(field);
+			$(".my-form").append(mobilehtml);
+
+		} else if (field.label === "Home Number") {
+			var homehtml = homeTemplate(field);
+			$(".my-form").append(homehtml);
+
+	};
 
 	// console.log(textItems);
+});
+
 };
 
 
 
 
 
+
+
+    // <i class="fa fa-envelope-o"></i>
 
 
 
