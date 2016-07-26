@@ -1,4 +1,4 @@
-import $ from 'jquery';
+    import $ from 'jquery';
 
 // ======short version of lines 8-17=====
 // $.ajax("https://json-data.herokuapp.com/forms").then(function(response){
@@ -62,6 +62,7 @@ function urlTemplate (data) {
 function langTemplate (data) {
 	return `
     <div class="lang-input">
+      <i class="fa ${data.icon}"></i>
       <input type="text"
              id="${data.id} "placeholder="${data.label}">
     </div>`;

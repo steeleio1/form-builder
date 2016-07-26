@@ -26,28 +26,6 @@
 	color: #FFFFFF;
 }
 
-/*.test {
-	display: flex;
-	border: solid red 1px;
-	height: 30px;
-	width: 400px;
-	align-items: center;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	background-image:url(http://www.placecage.com/c/20/20);
-	background-repeat:no-repeat;
-	background-position:6px;
-
-}
-*/
-/*input#fname*/
-
-
-/*.inputstyle {
-	border: solid pink 1px;
-	border-radius: 20%;
-}
-*/
 
 .form-input {
 	display: flex;
@@ -67,11 +45,15 @@
     	padding-left: 20px;
     }
    i {
+   	padding-left: 5px;
+   	padding-top: 5px;
    	position: absolute;
    	left: 0px;
+   	color: grey;
    }
 /*	justify-content: center;*/
 }
+
 
 .lang-input {
 	display: flex;
@@ -89,18 +71,14 @@
 	display: flex;
 /*	display: flex;*/
 /*	flex-direction: column;*/
-	border: solid red 1px;
+	border: solid grey 1px;
 	height: 60px;
 	width: 400px;
 	align-items: center;
 	margin-top: 10px;
+	   	color: grey;
 /*	justify-content: center;*/
 }
-
-/*.commentbox {
-	height: 40px;
-	width: 200px;
-}*/
 
 
 
@@ -131,8 +109,13 @@
 	justify-content: center;
 	background: #C9DEF0;
 	align-self: flex-end;
-		border-radius: 5%;
+	border-radius: 5%;
 }
 
+.submit-form {
+	background: #438ACA;
+	border-radius: 20%;
+
+}
 
 
